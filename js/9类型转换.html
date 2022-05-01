@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>强类型</title>
+    <script>
+        var a = 123;
+        a = a.toString();
+        //该方法不会影响原变量 它会将转换的结果返回
+        a = true;
+        a = a.toString()
+
+        a = null
+        a = Number(a)
+
+        // a = undefined;
+        // a = a.toString()
+
+        console.log(typeof a)
+        console.log(a)
+        // console.log(b)
+        // console.log(typeof b)
+    </script>
+</head>
+<body>
+<!--  转换为string number  boolean-->
+</body>
+</html>
