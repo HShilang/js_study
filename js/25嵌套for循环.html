@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嵌套</title>
+</head>
+<body>
+<script>
+    var i, j, k;
+    for (i = 1; i <= 4; i++) {
+        //前四行
+        for (j = 1; j <= 4 - i; j++) {
+            document.write("&nbsp;&nbsp;");       //4-j 控制空格的数量
+        }
+        for (k = 1; k <= 2 * i - 1; k++) {
+            document.write("*&nbsp;");     //2*i-1 控制*的数量
+        }
+        document.write("<br/>");
+    }
+    //后三行
+    for (i = 1; i <= 3; i++) {
+        for (j = 1; j <= i; j++) {
+            document.write("&nbsp;&nbsp;");	     //i控制空格的数量
+        }
+        for (k = 1; k <= 7 - 2 * i; k++) {
+            document.write("*&nbsp;");        // 7-2*i控制*的数量
+        }
+        document.write("<br/>");
+    }
+</script>
+</body>
+</html>
