@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    // 函数也是对象，函数可以封装一些功能或者代码
+    var fun = new Function("console.log('This is my first function')")
+    fun();
+
+    //使用函数声明来创建一个函数
+    function fun2(){
+        console.log('只是我')
+        alert("哈哈")
+        document.write('This is my')
+    }
+    // 函数表达式来创建一个函数
+    var fun3 = function(){
+        console.log("我是匿名函数")
+    }
+    fun3()
+    console.log(fun2)
+
+</script>
+<body>
+
+</body>
+</html>

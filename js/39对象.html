@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj = new Object();
+
+    obj.name = "Hanson";
+    obj.age = 18;
+
+    obj.sayName = function (){
+        console.log(obj.name)
+    };
+
+    console.log()
+            obj.sayName();
+            //函数也可以成为对象的属性保存
+            //调用函数就说调用对象的方法(method)
+
+            // 但是它只是名称上的区别和其他没有区别
+    var obj2 = {
+        name :"猪八戒",
+        age:18,
+        sayNmae:function (){
+            console.log(obj2.name)
+        }
+    };
+    obj2.sayNmae()
+</script>
+
+</body>
+</html>

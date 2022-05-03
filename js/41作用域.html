@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+</head>
+<body>
+<!--全局作用域-->
+<!--全局作用域在页面打开时加载，在页面关闭时销毁-->
+<!--在全局作用域有一个window，我们可以直接使用-->
+<!--它代表的是一个浏览器的窗口，它由浏览器创建的我们可以直接使用-->
+<!--局部作用域  函数作用域-->
+<script>
+    var a =123;
+    var b = 456;
+    window.name = 'Hanson'
+  function fun(){
+      var a = 123;
+  }
+  fun();
+    console.log(window)
+  console.log(a)
+</script>
+</body>
+</html>
