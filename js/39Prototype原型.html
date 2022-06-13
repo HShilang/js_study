@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person() {
+
+    }
+
+    function Dog() {
+    }
+
+    Person.prototype.a = 1;
+    Person.prototype.sayHello = function () {
+        alert('Hello')
+    }
+    var mc = new Person()
+    var mc2 = new Person()
+    console.log(mc.a)
+    mc.sayHello();
+</script>
+</html>
