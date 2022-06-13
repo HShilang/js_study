@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //这个隐含参数是this，  this指向的一个对象
+    // 这个对象称为函数的上下文对象
+  function func(){
+      console.log("a="+a,"b="+b)
+  }
+  var obj={
+      name:'Hanson',
+      sayName:func
+  }
+    console.log(obj.sayName());
+</script>
+
+</body>
+</html>
