@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  function pro(){}
+  pro.prototype.name='我是原型中的姓名';
+  var pro = new pro();
+  console.log(pro.__proto__.__proto__.__proto__);
+</script>
+</html>
