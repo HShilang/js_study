@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj1 = {
+        name: 'Hanson',
+        age: 24,
+        gender: 'male',
+        sayName: function () {
+            alert(this.name)
+        }
+    }
+
+    //工厂方式创建
+    function createPerson(name, gender, age, gf) {
+        var obj = new Object();
+        obj.name = name;
+        obj.gender = gender;
+        obj.age = age;
+        obj.gf = gf;
+        obj.sayName = function () {
+            alert(this.gf)
+        }
+        return obj;
+    }
+
+    var obj2 = createPerson('Hanson','male',24,'jxs')
+    var obj3 = createPerson('Hansons','male',24,'jxs')
+    console.log(obj2);
+    console.log(obj3);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name, age, gender, gf) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.gf = gf
+        this.sayName = func;
+    }
+
+    // 放在全局里面，污染了全局的命名空间，而且不安全
+    function func() {
+        alert('对象是' + this.gf)
+    }
+
+    var per1 = new Person('han', 24, 'male', 'jx')
+    var per1 = new Person('han', 24, 'male', '纪向')
+    per1.sayName()
+</script>
+
+</body>
+</html>

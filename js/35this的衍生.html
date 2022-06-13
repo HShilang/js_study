@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var name = '全局'
+
+    function func() {
+        console.log(this.name)
+    }
+
+    var obj1 = {
+        name: 'Hanson',
+        sayName: func
+    }
+    var obj2 = {
+        name: 'Galen',
+        sayName: func
+    }
+
+    obj1.sayName()
+</script>
+
+</body>
+</html>
