@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(name, age, gender, gf) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.gf = gf;
+    }
+
+    let per1 = new Person('Hanson', 24, 'male', 'jx')
+    let per2 = new Person('Hansons', 16, 'male', 'jx')
+    let per3 = new Person('Hansonss', 13, 'male', 'jx')
+    let per4 = new Person('Hansonsss', 20, 'male', 'jx')
+    var perarr = [per1, per2, per3, per4]
+
+
+    //forEach遍历  ie8以下不兼容
+    perarr.forEach((val, index, arr) => {
+        console.log(val.gf)
+    })
+    // function getAdult(arr) {
+    //     var newarr = []
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i].age > 18) {
+    //             newarr.push(arr[i])
+    //         }
+    //     }
+    //     return newarr
+    // }
+
+    // let arr = ['Hanson', 'jx', 'Galen', 'Lucas']
+    // for (let i = 0; i < arr.length; i++) {
+    //     console.log(arr[i])
+    // }
+    // console.log(arr)
+</script>
+</html>
