@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(name, age, gender, gf) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.gf = gf;
+    }
+
+    let per1 = new Person('Hanson', 24, 'male', 'jx')
+    let per2 = new Person('Hansons', 16, 'male', 'jx')
+    let per3 = new Person('Hansonss', 13, 'male', 'jx')
+    let per4 = new Person('Hansonsss', 20, 'male', 'jx')
+    var perarr = [per1, per2, per3, per4]
+    var arr = ['孙悟空', '猪八戒', '沙和尚','如来']
+   arr.splice(0, 1,'美猴王','jx')
+    console.log(arr);
+
+    // let newarr = newgf.slice(0, 2)
+    // console.log(newarr);
+</script>
+</html>
