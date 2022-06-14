@@ -8,19 +8,36 @@
 
 </body>
 <script>
-  // 数组（Array）
-  // 它和普通对象功能类似，也是存储值的
+    // 数组（Array）
+    // 它和普通对象功能类似，也是存储值的
 
-  let arr = new Array();
-  arr[0]=10
-  arr[1]=102
-  arr[10]=1023
-  arr[100]=10232
-  arr[length]=70
-  console.log(arr)
-  console.log(arr.length)
-  arr.length = 4
-  console.log(arr.length)
-
+    // let arr = new Array();
+    // arr[0]=10
+    // arr[1]=102
+    // arr[10]=1023
+    // arr[100]=10232
+    // arr[length]=70
+    // console.log(arr)
+    // console.log(arr.length)
+    // arr.length = 4
+    // console.log(arr.length)
+    var arr = [1, 23, 4, 10, 22, 66, 23, 4, -2, 16, 10]
+    console.log(arr)
+    console.log(typeof arr)
+    console.log(arr)
+    // reduce去重
+    // let quchong = arr.reduce((pre, cur)=> {
+    //     pre.indexOf(cur) === -1 && pre.push(cur);
+    //     return pre
+    // },[])
+    //filter去重
+    // let m = arr.filter((val,index,arr)=>{
+    //     return arr.indexOf(val) === index
+    // })
+    //set去重
+    let set = new Set(arr)
+    arr=[...set]
+    console.log(arr)
+    // console.log(set)
 </script>
 </html>

@@ -8,20 +8,22 @@
 
 </body>
 <script>
-    let arr = [2,3,5,-7,1,5,32,8,3,5,8,3]
-    let sum = arr.reduce(function (pre,cur){
-        return pre+cur
-    },0)
-    let max = arr.reduce(function (pre,cur){
-        return Math.max(pre,cur)
+    let arr = [2, 3, 5, -7, 1, 5, 32, 8, 3, 5, 8, 3]
+    let sum = arr.reduce(function (pre, cur) {
+        return pre + cur
+    }, 0)
+    let max = arr.reduce(function (pre, cur) {
+        return Math.max(pre, cur)
     })
-    let min = arr.reduce(function (pre,cur){
-        return Math.min(pre,cur)
+    let min = arr.reduce(function (pre, cur) {
+        return Math.min(pre, cur)
     })
-    let quchong = arr.reduce(function (pre,cur){
+
+    //数组去重
+    let quchong = arr.reduce(function (pre, cur) {
         pre.indexOf(cur) === -1 && pre.push(cur);
         return pre
-    },[])
+    }, [])
     console.log(sum)
     console.log(max);
     console.log(min);
