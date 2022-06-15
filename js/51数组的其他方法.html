@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var arrPerson = ['孙悟空', '猪八戒', '沙和尚']
+    var arrNum = [3, 2, 67, 39, 34, 5, 56, 233]
+    var arrLetter = ['e', 'd', 'csaa', 'sa', 'f', 'u', 'm', 'w', 'z', 'y', 'x']
+    //拼成字符串，用逗号隔开
+    // let newarrr = arrPerson.join()
+    arrNum.sort((a, b) => {
+        return b - a
+    })
+    var ss = arrLetter.splice(2, 3, 'a', 's')
+    console.log(arrLetter);
+    // console.log(arrNum)
+    console.log(ss)
+</script>
+</html>
