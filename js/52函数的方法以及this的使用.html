@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function func(a,b){
+        console.log("a="+a)
+        console.log("b="+b)
+    }
+
+
+    var obj={
+        name:'obj',
+        sayName:function(){
+            console.log(this.name)
+        }
+    }
+    func.apply(obj,[2,3])
+
+    var obj2={
+        name:'obj2'
+    }
+</script>
+</html>
