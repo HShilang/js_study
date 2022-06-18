@@ -9,16 +9,16 @@
 <script>
     // 数组的去重
     var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 3, 4, 45, 653, 23]
+    var set = new Set(arr)
+    set = [...set]
+    console.log(set)
     let newarr = []
-    console.log(m)
-    var m = 2;
     for (let i = 0; i < arr.length; i++) {
-
         if (newarr.indexOf(arr[i]) === -1) {
             newarr.push(arr[i])
         }
     }
-    console.log(newarr);
+    // console.log(newarr);
     // console.log(m);
     // arr.forEach((val,index,arr)=>{
     //         if (arr.indexOf((val)===index)){

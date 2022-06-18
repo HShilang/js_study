@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    let num = new Number(3);
+    num.hello = 'adsdsadas'
+    console.log(num.hello);
+
+    //通过两个对比，我们可以发现对象比单独的类型好用
+    let num2 = 3
+    num2.hello = 'adsdsadas'
+    // console.log(num2.hello)
+
+
+    let bool = new Boolean(true);
+    // console.log(bool);
+    let bool2 = true;
+    // console.log(bool===bool2);
+
+    let test = 3;
+    test = test.toString()
+     test.toString()   //这里注意一定要赋值给新的对象
+    let test2='HSA'
+    console.log(test2.toLowerCase());
+    console.log(typeof test)
+</script>
+</html>
