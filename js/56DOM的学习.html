@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">This is a button</button>
+<button id="btn2">This is a button</button>
+<button id="btn3">This is a button</button>
+</body>
+<script>
+    console.log(document)
+    document.getElementById('btn').innerText = 'This is not  a button';
+    // document.getElementById('btn').onmousemove = () => {
+    //     alert("This is a button");
+    // }
+    document.getElementsByTagName('button').onclick = () => {
+        alert("This is a button");
+    }
+</script>
+</html>
