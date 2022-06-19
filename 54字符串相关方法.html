@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let hello = 'Hello';
+    let hell2o = '\tWorlddd';
+    console.log(hello.concat(hell2o));
+
+    result = hell2o.indexOf('d', 0);  //第二个数字表示从第几个开始查找
+    result2 = hell2o.lastIndexOf('d', 7); //第二个数字表示从第几个开始查找  但是是从后往前找
+    // console.log(result);
+    // console.log(result2);
+    let str = 'Hello World';
+    let result3 = str.slice(1, 2); //截取字符串  第一个是开始位置的索引(包括开始位置) 第二个是结束位置的索引(不包括结束位置)  如果省略就会截取所有
+    let result4 = str.substring(1);//截取字符串  第一个是开始位置的索引(包括开始位置) 第二个是结束位置的索引(不包括结束位置) 这个方法不接收负值，接收的话默认为0
+    // console.log(result3)
+    // console.log(result4)
+    let arrs = "asd,dsgfset,df,ads,sdfsdf".split(','); //把字符串按照指定的分隔符分割成数组
+    let arrs2 = "asdsgfsetdfadsdfsdf".split('-');
+    console.log(arrs2)
+    console.log(arrs)
+</script>
+</html>
