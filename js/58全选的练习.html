@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    // 点击按钮全选
+    window.onload = function () {
+        let checkAll = document.getElementById('checkAllBtn').onclick = () => {
+            let checkboxs = document.getElementsByName('items');
+            for (let i = 0; i < checkboxs.length; i++) {
+                checkboxs[i].checked = true;
+            }
+        }
+        // 点击按钮取消全选
+        let uncheckAll = document.getElementById('checkNoBtn').onclick = () => {
+            let checkboxs = document.getElementsByName('items');
+            for (let i = 0; i < checkboxs.length; i++) {
+                checkboxs[i].checked = false;
+            }
+        }
+        // 点击按钮弹出提示框
+        let send = document.getElementById('sendBtn').onclick = () => {
+            let checkboxs = document.getElementsByName('items');
+            let str = '';
+            for (let i = 0; i < checkboxs.length; i++) {
+                if (checkboxs[i].checked) {
+                    str += checkboxs[i].value + ',';
+                }
+            }
+            alert(str);
+        }
+        // 点击按钮反选
+        let checkRevBtn = document.getElementById('checkRevBtn').onclick = () => {
+            let checkboxs = document.getElementsByName('items');
+            for (let i = 0; i < checkboxs.length; i++) {
+                checkboxs[i].checked = !checkboxs[i].checked;
+            }
+        }
+    }
+
+</script>
+
+<body>
+<form>
+    你的爱好运动是?<input type="checkbox" id="checkAll"/> 全选/取消全选
+
+    <br/>
+    <input type="checkbox" name="items" value="篮球"/>篮球
+    <input type="checkbox" name="items" value="足球"/>足球
+    <input type="checkbox" name="items" value="羽毛球"/>羽毛球
+    <input type="checkbox" name="items" value="乒乓球"/>乒乓球
+    <br/>
+    <input type="button" id="checkAllBtn" value="全 选 ">
+    <input type="button" id="checkNoBtn" value="全不选 ">
+    <input type="button" id="checkRevBtn" value="反选 ">
+    <input type="button" id="sendBtn" value="提交 ">
+
+</form>
+</body>
+</html>
