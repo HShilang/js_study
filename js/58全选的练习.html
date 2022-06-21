@@ -55,8 +55,6 @@
         let checkRevBtn = document.getElementById('checkRevBtn');
         checkRevBtn.onclick = () => {
             let checkboxs = document.getElementsByName('items');
-            checkAll.checked = true;
-
             for (let i = 0; i < checkboxs.length; i++) {
                 // if (checkboxs[i].checked) {
                 //     checkboxs[i].checked = false;
@@ -65,13 +63,20 @@
                 // }
                 //上边的if else等同于下边的这个代码
                 checkboxs[i].checked = !checkboxs[i].checked;
-                checkboxs[i].onclick = function () {
-                    if (!checkboxs[i].checked) {
-                        checkAll.checked = false;
-                    }
+            }
+            checkAll.checked = true;
+            for (let j = 0; j < checkboxs.length; j++) {
+                if (!checkboxs[j].checked) {
+                    checkAll.checked = false;
+                    break;
                 }
             }
+        }
+        let checkboxs = document.getElementsByName('items');
+        for (let i = 0; i < checkboxs.length; i++) {
+            checkboxs[i].onclick = function () {
 
+            }
         }
     }
 
