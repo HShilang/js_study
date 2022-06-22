@@ -1,58 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div class="root">
-    <p id="info"></p>
-    <img src="../image/1.jpg" alt="没有了">
-    <button id="next">上一张</button>
-    <button id="prev">下一张</button>
-</div>
-</body>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    .root {
-        width: 500px;
-        margin: 50px auto;
-        text-align: center;
-    }
-</style>
-<script>
-    let next = document.getElementById('next');
-    let prev = document.getElementById('prev');
-    let img = document.getElementsByTagName('img')[0];
-    let info = document.getElementById('info');
-
-
-    let imgArr = ["../image/1.jpg", "../image/2.jpg", "../image/3.jpg", "../image/4.jpg", "../image/0.jpg"]
-    let index = 0;
-    prev.onclick = () => {
-
-        index++;
-        if (index > imgArr.length - 1) {
-            index = imgArr.length - 1;
-        }
-        img.src = imgArr[index];
-        info.innerHTML = '当前图片是第：' + (index + 1) + '张,' + "一共有:" + imgArr.length + '张';
-
-
-    }
-    next.onclick = function () {
-
-        index--;
-        if (index < 0) {
-            index = imgArr.length - 1;
-        }
-        img.src = imgArr[index];
-        info.innerHTML = '当前图片是第：' + (index + 1) + '张,' + "一共有:" + imgArr.length + '张';
-    }
-    // info.innerHTML=''+im
-</script>
-</html>
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <title>Title</title></head><body><div class="root">    <p id="info"></p>    <img src="../image/1.jpg" alt="没有了">    <button id="next">上一张</button>    <button id="prev">下一张</button></div></body><style>    * {        margin: 0;        padding: 0;    }    .root {        width: 500px;        margin: 50px auto;        text-align: center;    }</style><script>    let next = document.getElementById('next');    let prev = document.getElementById('prev');    let img = document.getElementsByTagName('img')[0];    let info = document.getElementById('info');    let imgArr = ["../image/1.jpg", "../image/2.jpg", "../image/3.jpg", "../image/4.jpg", "../image/0.jpg"]    let index = 0;    prev.onclick = () => {        index++;        if (index > imgArr.length - 1) {            index = imgArr.length - 1;        }        img.src = imgArr[index];        info.innerHTML = '当前图片是第：' + (index + 1) + '张,' + "一共有:" + imgArr.length + '张';    }    next.onclick = function () {        index--;        if (index < 0) {            index = imgArr.length - 1;        }        img.src = imgArr[index];        info.innerHTML = '当前图片是第：' + (index + 1) + '张,' + "一共有:" + imgArr.length + '张';    }    // info.innerHTML=''+im</script></html>
