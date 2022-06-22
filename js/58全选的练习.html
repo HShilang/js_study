@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    window.onload = function () {
+        // 点击按钮全选
+        let checkAllBtn = document.getElementById('checkAllBtn');
+        checkAllBtn.onclick = () => {
+            let checkboxs = document.getElementsByName('items');
+            for (let i = 0; i < checkboxs.length; i++) {
+                checkboxs[i].checked = true;
+            }
+            checkAll.checked = true;
+
+        }
+
+
+        //全选全不选多选框
+        //这里不使用匿名函数的原因是this的指向，我们要取函数的值，而不是windows
+        let checkAll = document.getElementById('checkAll');
+        checkAll.onclick = function () {
+            let check = document.getElementsByName('items');
+            for (let i = 0; i < check.length; i++) {
+                check[i].checked = this.checked;
+            }
+        }
+
+
+        // 点击按钮取消全选
+        let uncheckAll = document.getElementById('checkNoBtn');
+        uncheckAll.onclick = () => {
+            let checkboxs = document.getElementsByName('items');
+            for (let i = 0; i < checkboxs.length; i++) {
+                checkboxs[i].checked = false;
+            }
+            checkAll.checked = false;
+        }
+        // 点击按钮弹出提示框
+        let send = document.getElementById('sendBtn');
+        send.onclick = () => {
+            let checkboxs = document.getElementsByName('items');
+            let str = '';
+            for (let i = 0; i < checkboxs.length; i++) {
+                if (checkboxs[i].checked) {
+                    str += checkboxs[i].value + ',';
+                }
+            }
+            alert(str);
+        }
+        // 点击按钮反选
+        let checkRevBtn = document.getElementById('checkRevBtn');
+        checkRevBtn.onclick = () => {
+            let checkboxs = document.getElementsByName('items');
+            for (let i = 0; i < checkboxs.length; i++) {
+                // if (checkboxs[i].checked) {
+                //     checkboxs[i].checked = false;
+                // } else {
+                //     checkboxs[i].checked = true;
+                // }
+                //上边的if else等同于下边的这个代码
+                checkboxs[i].checked = !checkboxs[i].checked;
+            }
+            checkAll.checked = true;
+            for (let j = 0; j < checkboxs.length; j++) {
+                if (!checkboxs[j].checked) {
+                    checkAll.checked = false;
+                    break;
+                }
+            }
+        }
+        let checkboxs = document.getElementsByName('items');
+        for (let i = 0; i < checkboxs.length; i++) {
+            checkboxs[i].onclick = function () {
+
+            }
+        }
+    }
+
+</script>
+
+<body>
+<form>
+    你的爱好运动是?<input type="checkbox" id="checkAll"/> 全选/取消全选
+
+    <br/>
+    <input type="checkbox" name="items" value="篮球"/>篮球
+    <input type="checkbox" name="items" value="足球"/>足球
+    <input type="checkbox" name="items" value="羽毛球"/>羽毛球
+    <input type="checkbox" name="items" value="乒乓球"/>乒乓球
+    <br/>
+    <input type="button" id="checkAllBtn" value="全 选 ">
+    <input type="button" id="checkNoBtn" value="全不选 ">
+    <input type="button" id="checkRevBtn" value="反选 ">
+    <input type="button" id="sendBtn" value="提交 ">
+
+</form>
+</body>
+</html>
