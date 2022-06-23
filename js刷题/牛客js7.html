@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+    const _getUniqueNums = (start, end, n) => {
+        // 补全代码
+        let number = new Set()
+        while (number.size < n) number.add(start + Math.floor(Math.random() * (end - start + 1)))
+        return [...number]
+    }
+    console.log(_getUniqueNums(2, 10, 4))
+</script>
+</body>
+</html>
